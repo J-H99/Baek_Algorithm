@@ -1,3 +1,4 @@
-<h1>BAEKJOON Algorithm Problem Solving</h1>
-<hr>
+# BAEKJOON Algorithm Problem Solving
 🎀 The end of the Foler name attached is "Algorithm Category".
+<hr>
+
