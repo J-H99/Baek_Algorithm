@@ -26,5 +26,6 @@ int main() {
 
         cout << DP[N-1];
     }
+    
     return 0;
 }
