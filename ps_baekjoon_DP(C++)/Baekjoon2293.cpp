@@ -25,5 +25,7 @@ int main() {
     }    
 
     cout << DP[k];
+    delete cost;
+    delete DP;
     return 0;
 }  

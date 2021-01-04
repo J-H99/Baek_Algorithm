@@ -27,5 +27,6 @@ int main() {
         cout << DP[N-1];
     }
     
+    delete DP;
     return 0;
 }

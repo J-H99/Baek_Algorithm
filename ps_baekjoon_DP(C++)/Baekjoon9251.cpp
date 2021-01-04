@@ -32,5 +32,9 @@ int main() {
     }
 
     cout << *max_element(dp_sequence[second.length() - 1], dp_sequence[second.length() - 1] + first.length());
+    for (int i = 0; i < second.length(); i++) {
+        delete dp_sequence[i];
+    }
+    delete dp_sequence;
     return 0;
 }

@@ -29,5 +29,6 @@ int main() {
     }
 
     cout << *max_element(sequence, sequence + second.length());
+    delete sequence;
     return 0;
 }
