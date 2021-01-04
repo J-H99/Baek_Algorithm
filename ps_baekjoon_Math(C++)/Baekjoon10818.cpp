@@ -20,5 +20,6 @@ int main() {
     sort(arr, arr + N, compare);
 
     cout << arr[0] << " " << arr[N-1];
+    delete arr;
     return 0;
 }

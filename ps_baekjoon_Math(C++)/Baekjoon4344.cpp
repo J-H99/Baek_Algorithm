@@ -42,4 +42,7 @@ int main() {
         
         cout << (cnt / (double)num[i])*100 << "%" << endl;
     }
+
+    delete score;
+    delete avg;
 }

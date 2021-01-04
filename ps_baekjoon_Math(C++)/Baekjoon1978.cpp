@@ -38,5 +38,6 @@ int main() {
         }
     }
     cout << cnt;
+    delete value;
     return 0;  
 }

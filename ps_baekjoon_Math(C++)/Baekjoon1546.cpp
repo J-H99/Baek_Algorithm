@@ -25,5 +25,7 @@ int main() {
     }
 
     cout << sum / N;
-
+    delete score;
+    delete res;
+    return 0;
 }
