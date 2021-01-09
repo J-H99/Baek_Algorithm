@@ -11,7 +11,7 @@ LL gcd(int A, int B) {
     if (A < B) {
         int temp = A;
         A = B;
-        B = A;
+        B = temp;
     }
 
     return gcd(B, A % B);
