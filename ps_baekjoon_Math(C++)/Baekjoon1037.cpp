@@ -17,6 +17,5 @@ int main() {
     }
 
     sort(trivial_divisor, trivial_divisor + N, compare);
-
     cout << trivial_divisor[0] * trivial_divisor[N - 1];
 }
