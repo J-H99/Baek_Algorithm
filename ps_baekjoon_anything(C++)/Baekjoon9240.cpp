@@ -82,11 +82,6 @@ int main() {
         score[i] = 0;
     }
     
-    // for (int i = 0; i < hull_number; i++) {
-    //     // cout << "first :\t" << convex_hull_point[i].first << "\t" << convex_hull_point[i].second<<endl;
-    //     cout << score[i] << endl;
-    // }
-
     for (int i = 0; i < hull_number - 1; i++) {
         for (int j = i; j < hull_number - 1;j ++) {
             dist = sqrt((convex_hull_point[i].first - convex_hull_point[j + 1].first) * (convex_hull_point[i].first - convex_hull_point[j + 1].first) + (convex_hull_point[i].second - convex_hull_point[j + 1].second) * (convex_hull_point[i].second - convex_hull_point[j + 1].second));
