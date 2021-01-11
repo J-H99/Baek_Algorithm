@@ -68,5 +68,6 @@ int main() {
     }
 
     cout << convex_hull.size();
+    delete point_arr;
     return 0;
 }
