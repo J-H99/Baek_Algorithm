@@ -92,6 +92,7 @@ int main() {
     cout << fixed;
     cout.precision(6);
     cout << *max_element(score, score + N);
+    
     delete point_arr;
     delete convex_hull_point;
     delete score;
