@@ -12,6 +12,7 @@ int main() {
     cin >> N;
 
     int* trivial_divisor = new int[N];
+    
     for (int i = 0; i < N; i++) {
         cin >> trivial_divisor[i];
     }
