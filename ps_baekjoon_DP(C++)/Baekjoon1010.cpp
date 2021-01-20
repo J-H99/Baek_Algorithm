@@ -3,42 +3,40 @@
 using namespace std;
 using LL = long long;
 
-LL dp(int N, int M) {
-    LL solution = 0;
-    
-    if (N == M) {
-        solution += 1;
-    }
-
-    else if (N == 1) {
-        solution += M;
-    }
-
-    else {
-        for (int i = N - 1; i < M; i++) {
-          solution += dp(N-1, i);
-        }
-    }
-    
-    return solution;
-}
-
 int main() {
-    int T;
-    int N, M;
+    cin.tie(NULL);
+    ios::sync_with_stdio(false);
+    int T, N, M;
     cin >> T;
 
-    pair<int, int>* pair_arr = new pair<int, int>[T]; 
+    LL* result = new LL[T];
+    int DP[31][31] = { {-1, },};
+
+    for (int i = 1; i <= 30; i++) {
+        DP[i][i] = 1;
+        DP[1][i] = i;
+    }
 
     for(int i = 0; i < T; i++) {
         cin >> N >> M;
-        pair_arr[i].first = N;
-        pair_arr[i].second = M;
+
+        if (N == 1) {
+            result[i] = DP[1][M];
+        }
+
+        else {
+            for (int j = 2; j <= N; j++) {
+                for (int k = j + 1; k <= M; k++) {
+                    DP[j][k] = DP[j][k - 1] + DP[j - 1][k - 1];
+                }
+            }
+
+            result[i] = DP[N][M];
+        }
     }
 
-    for(int i = 0; i < T; i++) {
-        cout << dp(pair_arr[i].first, pair_arr[i].second) << endl;
+    for (int i = 0; i < T; i++) {
+        cout << result[i] << "\n";
     }
-
-    delete pair_arr;
+    delete result;
 }
