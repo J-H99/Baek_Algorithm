@@ -1,0 +1,70 @@
+#include <iostream>
+#include <string>
+#include <queue>
+
+using namespace std;
+
+int main() {
+    cin.tie(NULL);
+    ios::sync_with_stdio(false);
+    int N, value;
+    string op;
+    cin >> N;
+
+    queue<int> q;
+    for (int i = 0; i < N; i++) {
+        cin >> op;
+
+        if (op == "push") {
+            cin >> value;
+            q.push(value);
+        }
+
+        else if (op == "pop") {
+            if (q.empty()) {
+                cout << "-1\n";
+            }
+
+            else {
+                cout << q.front() << "\n";
+                q.pop();
+            }
+        }
+
+        else if (op == "size") {
+            cout << q.size() << "\n";
+        }
+
+        else if (op == "empty") {
+            if (q.empty()) {
+                cout << "1\n";
+            }
+
+            else {
+                cout << "0\n";
+            }
+        }
+
+        else if (op == "front") {
+            if (q.empty()) {
+                cout << "-1\n";
+            }
+
+            else {
+                cout << q.front() << "\n";
+            }
+        }
+
+        else if (op == "back") {
+            if (q.empty()) {
+                cout << "-1\n";
+            }
+
+            else {
+                cout << q.back() << "\n";
+            }
+        }
+    }
+
+    return 0;
+}
